@@ -1,2 +1,2 @@
 # CyberSecurity
-Sharing scripts and stuff related to CyberSecurity
+Sharing some scripts, settings and firewall Rules
