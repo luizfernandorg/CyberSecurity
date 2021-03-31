@@ -21,10 +21,11 @@
 
 -- HOME_NET and EXTERNAL_NET must be set now
 -- setup the network addresses you are protecting
-HOME_NET = '192.168.25.134'
+HOME_NET = 'IP goes here or network address'
 
 -- set up the external network addresses.
 -- (leave as "any" in most situations)
+-- set '!HOME_NET' include everything that is not HOME_NET
 EXTERNAL_NET = '!$HOME_NET'
 
 include 'snort_defaults.lua'
