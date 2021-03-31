@@ -18,19 +18,16 @@ $WGETPATH/wget $RULESURI
 tar -zxf snort3-community-rules.tar.gz
 rm –f snort3-community-rules.tar.gz
 
-# Make a backup copy of existing rules
-mv $RULESDIR/snort3-community.rules $RULESDIRBAK
-
 # Copy community rules to rules location
-# but frist create a backup
-if [[ -f "/usr/local/etc/rules/snort3-community.rules" ]]; then
+# but frist create a backup if the file exists
+if [ -f "/usr/local/etc/rules/snort3-community.rules" ]; then
 	cp /usr/local/etc/rules/snort3-community.rules /usr/local/etc/rules/snort3-community.rules_bkp
 fi
 mv /tmp/snort3-community-rules/snort3-community.rules $RULESDIR
 
 ######################################################################
 # uncommet the lines bellow to set
-# all rules to drop instead of alert
+# all rules to drop rather than alert
 ######################################################################
 
 # replace '# alert' to 'drop'
@@ -45,6 +42,6 @@ mv /tmp/snort3-community-rules/snort3-community.rules $RULESDIR
 # same as above but for icmp
 #sed -i "s/alert icmp/drop icmp/g" /usr/local/etc/rules/snort3-community.rules
 
-# remove commented drop to drop
+# remove commente from "# drop" to "drop"
 #sed -i "s/# drop/drop/g" /usr/local/etc/rules/snort3-community.rules
 

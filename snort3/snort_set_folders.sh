@@ -21,7 +21,7 @@ sudo echo "alert icmp any any -> any any ( msg:"ICMP Traffic Detected"; sid:1000
 # Test snort config file and rule
 # for now on snort will caputre traffic
 # 
-# use ctrl+c to stop it
+# use ctrl+c to stoping it
 ##########################################################
 sudo snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/rules/local.rules
 sudo snort -c /usr/local/etc/snort/snort.lua -R /usr/local/etc/rules/local.rules \

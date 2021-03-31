@@ -6,7 +6,8 @@
 # /usr/local/etc/rules/*.rules
 # there is a example of snort.lua in this repository
 # in the folter snort3
+#
 # should update HOME_NET
-# in the ips section
+# and include path to each rule, in the ips section
 ##########################################################
-sudo snort -c /usr/local/etc/snort/snort.lua -i wlp2s0b1 -A alert_fast -s 65535 -k none
+sudo snort -c /usr/local/etc/snort/snort.lua -i eth0 -A alert_fast -s 65535 -k none
