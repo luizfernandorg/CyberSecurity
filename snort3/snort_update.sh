@@ -3,7 +3,6 @@
 # according to your installation.
 
 RULESDIR=/usr/local/etc/rules
-RULESDIRBAK=/usr/local/etc/rules/bak
 
 # Path to wget program. Modify for your system if needed.
 WGETPATH=/usr/bin
@@ -24,7 +23,7 @@ mv $RULESDIR/snort3-community.rules $RULESDIRBAK
 
 # Copy community rules to rules location
 # but frist create a backup
-if [ -e /usr/local/etc/rules/snort3-community.rules ]; then
+if [[ -f "/usr/local/etc/rules/snort3-community.rules" ]]; then
 	cp /usr/local/etc/rules/snort3-community.rules /usr/local/etc/rules/snort3-community.rules_bkp
 fi
 mv /tmp/snort3-community-rules/snort3-community.rules $RULESDIR
