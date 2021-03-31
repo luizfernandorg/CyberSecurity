@@ -9,5 +9,5 @@ snort_set_folders.sh
 snort_update.sh
 snort_start.sh
 
-execute script in that order from top to bottom
+execute scripts in that order from top to bottom
 each scripts has comments to give orientations
